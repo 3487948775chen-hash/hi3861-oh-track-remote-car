@@ -1,0 +1,31 @@
+static_library("my_robot") {
+    sources = [
+        "robot_control.c",
+        "trace_model.c",
+        "robot_hcsr04.c",
+        "oled_display.c",
+        "ssd1306.c",
+        "ssd1306_fonts.c",
+        "mqtt_control.c"      
+    ]
+defines = [ 
+        "SSD1306_USE_I2C",
+        "SSD1306_INCLUDE_FONT_7x10"
+    ]
+    include_dirs = [
+        "//applications/sample/wifi-iot/app/ssd1306", 
+        "//utils/native/lite/include",
+        "//kernel/liteos_m/components/cmsis/2.0",
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        "//device/soc/hisilicon/hi3861v100/hi3861_adapter/hals/communication/wifi_lite/wifiservice",
+        "//device/soc/hisilicon/hi3861v100/hi3861_adapter/kal",
+        "//third_party/lwip/src/include",
+        "//third_party/lwip/src/include/lwip",
+        "//third_party/paho_mqtt/MQTTClient-C/src",
+        "//third_party/paho_mqtt/MQTTClient-C/porting/liteos_m",
+    ]
+
+     deps = [
+        "//third_party/pahomqtt:pahomqtt_static",
+    ]
+}
