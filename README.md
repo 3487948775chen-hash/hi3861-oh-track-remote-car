@@ -1,3 +1,5 @@
+# 智能小车项目
+![项目实物图](E:\all_code\hi3861-oh-track-remote-car\docs\hardware_img1.jpg "小车实物运行实拍")
 \# hi3861-oh-smart-car
 
 基于Hi3861 WiFi IoT套件的OpenHarmony综合智能小车完整工程
